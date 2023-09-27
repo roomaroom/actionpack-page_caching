@@ -146,7 +146,7 @@ module ActionController
             if path.empty? || path =~ %r{\A/+\z}
               name = "/index"
             else
-              name = URI::DEFAULT_PARSER.unescape(path.chomp("/"))
+              name = URI::DEFAULT_PARSER.unescape(path)
             end
 
             if File.extname(name).empty?
